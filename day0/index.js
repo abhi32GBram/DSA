@@ -1,3 +1,5 @@
+/// GOTTA DO THIS SO THAT IM SURE IM DOING WELL WRT DSA USING JS .... HOPE THIS GOES WELL 10 1 24
+
 let a, b, c
 
 // a = window.prompt("enter length of side a : ")

@@ -1,0 +1,35 @@
+#labelCount {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+}
+
+#buttonDec,
+#buttonReset,
+#buttonInc {
+    background-color: #4caf50;
+
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    margin-top: 20px;
+}
+
+#buttonDec:hover,
+#buttonReset:hover,
+#buttonInc:hover {
+    background-color: #45a049;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
