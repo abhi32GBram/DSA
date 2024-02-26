@@ -1,42 +1,48 @@
 // @ts-nocheck
+
 'use strict';
 
-// Removed stdin event listeners and readLine function
-
-function alternatingCharacters(s) {
-  s = s.split("");
-  const N = s.length;
-  let res = 0;
-  for (let i = 0; i < N - 1; i++) {
-    if (s[i] === s[i + 1]) {
-      res++;
+// Function to perform insertion sort on the array
+function insertionSort1(n, arr) {
+    // The last element of the array is considered for sorting
+    let sort = arr[arr.length -   1];
+    let i;
+    // Loop through the array from the second last element to the first
+    for (i = arr.length -   2; (i >=   0) && (arr[i] > sort); i--) {
+        // Shift elements of arr[0..i-1], that are greater than sort, to one position ahead
+        arr[i +   1] = arr[i];
+        // Print the array after each shift
+        printArray(arr);
     }
-  }
-  return res;
+    // Insert the sort element at its correct position
+    arr[i +   1] = sort;
+    // Print the final sorted array
+    printArray(arr);
 }
 
+// Function to print the array
+function printArray(ar) {
+    let output = '';
+    // Loop through the array and append each element to the output string
+    for (let i =   0; i < ar.length; i++) {
+        output += ar[i] + " ";
+    }
+    // Print the output string
+    console.log(output.trim());
+}
+
+// Main function to simulate the input process and call the insertionSort1 function
 function main() {
-  // Directly call the function with your input data
-  const inputData = [
-    "AAAA",
-    "BBBBB",
-    "ABABABAB",
-    "BABABA",
-    "AAABBB"
-  ];
-
-  const q = inputData.length;
-
-  for (let qItr = 0; qItr < q; qItr++) {
-    const s = inputData[qItr];
-
-    const result = alternatingCharacters(s);
-
-    console.log(result); // Output the result to the console
-  }
+    // Number of elements in the array
+    const n =   5;
+    // The array to be sorted
+    const arr = [2,   4,   6,   8,   3];
+    // Call the insertionSort1 function with the array
+    insertionSort1(n, arr);
 }
 
-main(); // Call the main function
+// Call the main function to start the program
+main();
 // 'use strict';
 
 // const fs = require('fs');

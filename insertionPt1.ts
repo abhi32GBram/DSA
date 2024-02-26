@@ -1,30 +1,43 @@
 // @ts-nocheck
 
+// Function to perform insertion sort on an array, with a focus on the last element
 function insertionSort1(n, arr) {
-    let sort = arr[arr.length -  1];
+    // Store the last element of the array
+    let sort = arr[arr.length -   1];
     let i;
-    for (i = arr.length -  2; (i >=  0) && (arr[i] > sort); i--) {
-        arr[i +  1] = arr[i];
+    // Iterate through the array from the second last element to the first
+    // Shift elements that are greater than the last element to the right
+    for (i = arr.length -   2; (i >=   0) && (arr[i] > sort); i--) {
+        arr[i +   1] = arr[i];
+        // Print the array after each shift
         printArray(arr);
     }
-    arr[i +  1] = sort;
+    // Insert the last element in its correct position
+    arr[i +   1] = sort;
+    // Print the final sorted array
     printArray(arr);
 }
 
+// Function to print the array elements
 function printArray(ar) {
     let output = '';
-    for (let i =  0; i < ar.length; i++) {
+    // Iterate through the array and concatenate the elements into a string
+    for (let i =   0; i < ar.length; i++) {
         output += ar[i] + " ";
     }
+    // Print the array elements
     console.log(output.trim());
 }
 
+// Main function to test the insertion sort
 function main() {
-    const n =  5;
-    const arr = [2,  4,  6,  8,  3];
+    const n =   5;
+    const arr = [2,   4,   6,   8,   3];
+    // Call the insertion sort function with the array
     insertionSort1(n, arr);
 }
 
+// Call the main function to start the program
 main();
 // 'use strict';
 

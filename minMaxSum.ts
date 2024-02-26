@@ -1,24 +1,32 @@
 // @ts-nocheck
 
+// Function to calculate the minimum and maximum sum of four elements out of five
 function miniMaxSum(arr) {
+    // Sort the array in ascending order
     arr.sort((a, b) => a - b);
 
-    let x = 0;
-    let y = 0;
+    let x =  0; // Initialize variable to hold the sum of the smallest four elements
+    let y =  0; // Initialize variable to hold the sum of the largest four elements
 
-    for (let i = 0; i < 4; i++) {
+    // Calculate the sum of the smallest four elements
+    for (let i =  0; i <  4; i++) {
         x += arr[i];
     }
 
-    for (let i = 1; i < 5; i++) {
+    // Calculate the sum of the largest four elements
+    for (let i =  1; i <  5; i++) {
         y += arr[i];
     }
 
+    // Log the minimum and maximum sum
     console.log(x + " " + y);
 }
 
 // Call the function with the input array
-miniMaxSum([1, 2, 3, 4, 5]);
+miniMaxSum([1,  2,  3,  4,  5]);
+
+
+
 // 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 // 'use strict';
 
